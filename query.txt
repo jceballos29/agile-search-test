@@ -1,0 +1,51 @@
+countries:
+((countryId eq 'Es') or (countryId eq 'Fr') or (countryId eq 'It'))
+
+locations:
+((Locations/any(locations:locations/LocationId eq 678)) or (Locations/any(locations:locations/LocationId eq 25694)))
+
+annuities:
+((Annuities/any(annuities:annuities/AnnuityId eq 46)) or (Annuities/any(annuities:annuities/AnnuityId eq 45)))
+
+topologies: 
+((Typologies/any(typologies:typologies/TypologyId eq 2)) or (Typologies/any(typologies:typologies/TypologyId eq 5)))
+
+sectors:
+((Sectors/any(sectors:sectors/SectorId eq 28))) or (Sectors/any(sectors:sectors/SectorId eq 27)))
+
+targetSectors
+((TargetSectors/any(targetsectors:targetsectors/targetSectorId eq 1)) or (TargetSectors/any(targetsectors:targetsectors/targetSectorId eq 2)))
+
+beneficiaryTypes
+((BeneficiaryTypes/any(beneficiarytypes:beneficiarytypes/BeneficiaryTypeId eq 8)) or (BeneficiaryTypes/any(beneficiarytypes:beneficiarytypes/BeneficiaryTypeId eq 1)))
+
+categories
+((category eq 'B') or (category eq 'C'))
+
+status
+((status eq 'Closed') or (status eq 'Open'))
+
+minimis eq true
+
+
+
+((Annuities/any(annuities:annuities/AnnuityId eq 46)) or (Annuities/any(annuities:annuities/AnnuityId eq 45))) and 
+((Locations/any(locations:locations/LocationId eq 678)) or (Locations/any(locations:locations/LocationId eq 25694))) and 
+minimis eq false and 
+((status eq 'Closed') or (status eq 'Open')) and 
+((category eq 'B') or (category eq 'C')) and 
+((BeneficiaryTypes/any(beneficiarytypes:beneficiarytypes/BeneficiaryTypeId eq 10)) or (BeneficiaryTypes/any(beneficiarytypes:beneficiarytypes/BeneficiaryTypeId eq 1))) and
+((Typologies/any(typologies:typologies/TypologyId eq 2)) or (Typologies/any(typologies:typologies/TypologyId eq 5))) and 
+((Sectors/any(sectors:sectors/SectorId eq 28)) or (Sectors/any(sectors:sectors/SectorId eq 27))) and 
+((countryId eq 'Es') or (countryId eq 'Fr') or (countryId eq 'It')) and 
+((TargetSectors/any(targetsectors:targetsectors/targetSectorId eq 1)) or (TargetSectors/any(targetsectors:targetsectors/targetSectorId eq 2)))
+
+
+https://localhost:5001/api/v1/grants/search?$filter=((Locations/any(locations:locations/LocationId%20eq%2025692))%20or%20(Locations/any(locations:locations/LocationId%20eq%208)))%20and%20((status%20eq%20%27Open%27))%20and%20((category%20eq%20%27B%27)%20or%20(category%20eq%20%27D%27))%20and%20((Typologies/any(typologies:typologies/TypologyId%20eq%205)))%20and%20((Sectors/any(sectors:sectors/SectorId%20eq%2030))%20or%20(Sectors/any(sectors:sectors/SectorId%20eq%2032)))%20and%20((countryId%20eq%20%27Es%27)%20or%20(countryId%20eq%20%27It%27))&$orderby=orderByStatusCategory%20asc,publicationDate%20desc&$top=20&$skip=0&origin=search
+
+
+((Locations/any(locations:locations/LocationId eq 25692)) or (Locations/any(locations:locations/LocationId eq 8))) and ((status eq 'Open')) and ((category eq 'B') or (category eq 'D')) and ((Typologies/any(typologies:typologies/TypologyId eq 5))) and ((Sectors/any(sectors:sectors/SectorId eq 30)) or (Sectors/any(sectors:sectors/SectorId eq 32))) and ((countryId eq 'Es') or (countryId eq 'It'))
+orderByStatusCategory asc,publicationDate desc
+20
+0
+search
