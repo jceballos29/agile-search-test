@@ -4153,3 +4153,7 @@
         "isAdminCountry": false
     }
 }
+
+
+
+https://localhost:5001/api/v1/grants/search?$filter=((Annuities/any(annuities:annuities/AnnuityId%20eq%2045)))%20and%20((Locations/any(locations:locations/LocationId%20eq%208)))%20and%20minimis%20eq%20false%20and%20((status%20eq%20%27Open%27))%20and%20((category%20eq%20%27A%27))%20and%20((BeneficiaryTypes/any(beneficiarytypes:beneficiarytypes/BeneficiaryTypeId%20eq%202)))%20and%20((Typologies/any(typologies:typologies/TypologyId%20eq%2015)))%20and%20((Sectors/any(sectors:sectors/SectorId%20eq%2027)))%20and%20((countryId%20eq%20%27Es%27))&$orderby=orderByStatusCategory%20asc,publicationDate%20desc&$top=10&$skip=0&origin=search
