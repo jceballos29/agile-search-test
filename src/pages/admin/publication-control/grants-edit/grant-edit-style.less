@@ -1,0 +1,151 @@
+﻿@fi-dark-blue: rgb(0, 0, 164);
+@fi-light-blue: #00aeff;
+
+#first-container {
+    margin-top: 25px;
+}
+
+.grants-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0 75px;
+}
+
+.container-check {
+    display: flex;
+    margin-top: -15px;
+    padding: 15px;
+
+    .row-check {
+        width: 50%;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        .col-check {
+            padding: 5px;
+            flex-direction: row-reverse !important;
+            gap: 16px;
+        }        
+    }
+}
+
+
+.ant-card.ant-card-bordered.grants {
+    max-width: 1400px;
+    border-radius: 25px;
+}
+
+.general-container {
+    height: 800px;
+    overflow-y: auto;
+}
+
+.box-container {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin-bottom: 25px;
+
+    .title-edit {
+        font-size: 18px;
+        font-weight: bold;
+        background-color: @fi-light-blue;
+        color: white;
+        padding: 10px;
+        margin: 0;
+    }
+
+
+    .edit-container {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 15px 5px;
+        width: 100%;
+        margin: 0 !important;
+
+        .all-periods .datepicker-element {
+            margin: 0px 10px;
+        }
+    }
+
+    .edit-container>div {
+        padding: 10px;
+    }
+
+    .ant-col>label {
+        font-size: 16px;
+    }
+
+    .ant-input {
+        border-color: #d7d7d7;
+    }
+
+    .check-box-container {
+        width: 100%;
+        display: flex;
+        gap: 16px;
+
+        .check-box-item {
+            display: flex;
+            flex-flow: row;
+        }
+    }
+
+    .form-documents {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .form-documents>div {
+        width: 100%;
+        display: flex;
+    }
+}
+
+.doc-container {
+    display: flex;
+
+    .card-container {
+        width: 50%;
+        padding: 10px !important;
+    }
+
+    .card-annexes {
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px !important;
+
+        .ant-card-head {
+            background-color: @fi-light-blue;
+            color: white;
+        }
+    }
+}
+
+.add-periods span {
+    position: relative;
+    top: 30px;
+    cursor: pointer;
+}
+
+.date-fields {
+    display: flex;
+}
+
+.organism-inputs{
+
+    width: 100% !important;
+    padding-left: 5px;
+    padding-right: 5px;
+
+    .ant-form-item{
+        width: 100% !important;
+    }
+
+    .ant-col{
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+}

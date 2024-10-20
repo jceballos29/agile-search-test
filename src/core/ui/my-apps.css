@@ -1,0 +1,11 @@
+.my-apps .ant-drawer-header{
+    background-color : rgb(0,0,164);
+}
+
+.my-apps .ant-drawer-title, .my-apps .ant-drawer-close {
+    color: white;
+    font-weight: bold;
+}
+
+
+

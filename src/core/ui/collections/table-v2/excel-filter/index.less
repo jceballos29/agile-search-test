@@ -1,0 +1,86 @@
+.excel-filter-container {
+  width: 20vw;
+  min-width: 300px;
+  max-width: 350px;
+  div.clickable-div {
+    cursor: pointer;
+    padding: 5px 10px;
+    margin: 1px 0;
+    &:not(.disabled):hover {
+      background-color: aliceblue;
+    }
+
+    &.active {
+      background-color: aliceblue;
+    }
+
+    &.disabled {
+      cursor: default;
+      color: gainsboro;
+    }
+  }
+  span.clickable-span {
+    cursor: pointer;
+    color: #1890ff
+  }
+
+  .search.search.search.search.search {
+    .ant-input-affix-wrapper {
+      padding: 0 5px;
+      input {
+        height: 34px;
+        max-height: 34px;
+        min-height: 34px !important;
+      }
+    }
+  }
+
+  .advanced-filter-container {
+    padding: 0 12px;
+  }
+
+  .tree-container {
+    padding: 0 12px;
+    .tree {
+      border-left: 1px solid #d9d9d9;
+      border-right: 1px solid #d9d9d9;
+      border-bottom: 1px solid #d9d9d9;
+      padding: 0 10px 10px;
+      max-height: 20vh;
+      overflow-y: auto;
+
+      .tree-spinner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 70px;
+        margin-top: 10px;
+      }
+    }
+    span.ant-tree-switcher-icon {
+      display: none;
+    }
+    input.ant-input {
+      border-color: #d9d9d9 !important;
+      &:focus,
+      :active {
+        border-color: #40a9ff !important;
+        box-shadow: 0 0 0 2px rgb(24 144 255 / 20%);
+      }
+    }
+  }
+}
+.normal-text-input.normal-text-input.normal-text-input.normal-text-input.normal-text-input {
+  border: 1px solid #d9d9d9 !important;
+  &:focus,
+  :active {
+    border-color: #40a9ff !important;
+    box-shadow: 0 0 0 2px rgb(24 144 255 / 20%);
+  }
+  padding: 0 5px;
+  input {
+    height: 34px;
+    max-height: 34px;
+    min-height: 34px !important;
+  }
+}

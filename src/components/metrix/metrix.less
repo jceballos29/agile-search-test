@@ -1,0 +1,62 @@
+﻿.messageFloating {
+  z-index: 9999;
+}
+
+.messageFloating .floating-container {
+  background-color: darkred;
+}
+
+.floating-container {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  top: 111px;
+  right: 10px;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  box-shadow: 4px 4px 6px #999;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.top-grants-flyout {
+  z-index: 1002 !important;
+
+  .filter-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+
+    .tabs-container {
+      margin-top: 0px;
+      flex-grow: 1;
+      width: 100%;
+
+      .country-select-container {
+        margin-left: auto;
+      }
+    }
+  }
+}
+
+.metrix-content {
+  width: 100%;
+  margin-top: 0px;
+}
+
+.top-item {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.item-text,
+.item-flag {
+  display: inline;
+}
+
+.top-item:hover {
+  background: aliceblue;
+}

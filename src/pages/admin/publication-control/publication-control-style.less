@@ -1,0 +1,108 @@
+﻿@fi-dark-blue: #0000A4;
+@fi-light-blue: #00aeff;
+
+
+
+.create-grant .ant-form-item-control-input-content {
+    white-space: normal !important;
+}
+
+.row-buttons {
+    display: flex;
+    flex-wrap: wrap;
+
+    .ant-btn {
+        margin-bottom: 15px;
+        padding: 0 25px;
+    }
+}
+
+.row-filters {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.main-column {
+    display: flex;
+    flex-direction: column;
+}
+/*.ant-col .ant-col-24 {
+    display: flex;
+    flex-direction: column;
+
+    .toolbar:nth-child(3) {
+        margin-left: 5px;
+        margin-bottom: 20px;
+    }
+}*/
+
+.container-button {
+    display: flex;
+    gap: 24px;
+
+    span {
+        a {
+            font-size: 18px;
+            cursor: pointer;
+        }
+    }
+}
+
+.fa-spinner {
+    animation: spin-animation 0.5s infinite;
+    display: inline-block;
+}
+
+@keyframes spin-animation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(359deg);
+    }
+}
+
+.loader-container{
+    background-color: @fi-dark-blue;
+    opacity: 0.2;
+    width:100%;
+    height:100%;
+    position: absolute;
+    top:0;
+    left:0;
+
+}
+
+
+.loader-inner {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px; /* Need a specific value to work */
+}
+
+.main-column{
+    margin-bottom : 10px;
+}
+
+.ant-tabs-nav-wrap{
+    margin-left: 10px;
+}
+
+#rc-tabs-0-panel-1 .ant-card-body{
+    padding: 0 !important;
+}
+
+.publication-control {
+    .ant-table-thead > tr > th, .ant-table-tbody > tr > td, .ant-table tfoot > tr > th, .ant-table tfoot > tr > td {
+        padding: 16px 8px !important;
+    }
+}
+
+.toolbar .row-filters .ant-select-selector {
+    height: auto !important
+}

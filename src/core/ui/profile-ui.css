@@ -1,0 +1,16 @@
+.modal-profile, .modal-profile .ant-modal-content {
+    border-radius: 20px;
+    background: #EFEFEF;
+    padding-bottom: 0px !important;
+}
+
+.avatar-container {
+    display: flex !important;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.modal-profile .ant-modal-close-x {
+    font-size: 19px;
+    font-weight: bold
+}

@@ -1,0 +1,239 @@
+﻿@fi-dark-blue: rgb(0, 0, 164);
+@fi-light-blue: #00aeff;
+
+.filter-row {
+    display: flex;
+    width: 100%;
+    gap: 16px;
+    margin-bottom: 10px;
+
+    > .ant-col {
+        label {
+            color: @fi-dark-blue;
+        }
+
+        input {
+            border-color: #3649663b !important;
+        }
+    }
+}
+
+
+.button-row {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    gap: 16px;
+    padding: 0 20px;
+    margin-top: 20px;
+
+    button {
+        margin-right: 0 !important;
+    }
+}
+
+
+
+.calendar-container {
+    display: flex;
+    flex-direction: column;
+    padding: 25px 0px;
+    overflow: scroll;
+    height: 465px;
+    margin: 25px 20px 50px 20px;
+}
+
+.calendar-wrapper {
+    display: flex;
+    width: 100%;
+}
+
+.header-wrapper {
+    display: flex;
+    width: 100%;
+    position: sticky;
+    top: -25px;
+    z-index: 10;
+}
+
+.header-info {
+    width: 25%;
+    padding-right: 20px !important;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0,0,164);
+    color: white;
+    font-weight: 600;
+    border: 1px solid black;
+    position: sticky;
+    left: 0;
+
+    p {
+        margin: 0;
+    }
+}
+
+.header-date {
+    width: 75%;
+    display: flex;
+
+    .years {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: @fi-light-blue;
+        color: white;
+        font-size: 18px;
+        border-right: 1px solid black;
+        font-size: 22px;
+        font-weight: 600;
+    }
+
+    .years p {
+        margin: 0;
+    }
+
+    .month {
+        background-color: yellow;
+        width: 50px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #e7e7e7;
+        color: black;
+        font-size: 16px;
+        FONT-WEIGHT: 600;
+    }
+}
+
+.calendar-info {
+    width: 25%;
+    padding-left: 10px !important;
+    padding-right: 20px !important;
+    border-right: .5px solid lightgray;
+    border-left: .5px solid lightgray;
+    border-bottom: .5px solid lightgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px;
+    position: sticky;
+    background-color: white;
+    left: 0;
+    font-weight: 600;
+
+    p {
+        margin: 0;
+    }
+}
+
+
+.calendar-date {
+    width: 75%;
+    display: flex;
+    align-items: center;
+}
+
+.block-0 {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    border-bottom: 1px solid black;
+}
+
+.block-2021 {
+    border-right: .5px solid lightgray;
+    border-bottom: .5px solid lightgray;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    min-height: 55px;
+}
+
+
+
+.item-sel {
+    background-color: @fi-dark-blue;
+    width: 50px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.first-sel {
+    background-color: @fi-dark-blue;
+    width: 50px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.last-sel {
+    background-color: @fi-dark-blue;
+    width: 50px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.uni-sel {
+    background-color: @fi-dark-blue;
+    width: 50px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.item-normal {
+    width: 50px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+/*
+.item-selected::after {
+    position: absolute;
+    content: " ";
+    display: block;
+    height: 77px;
+    border-right: 1px solid #1a010138;
+    width: 50px
+}
+
+.item-normal::after {
+    position: absolute;
+    content: " ";
+    display: block;
+    height: 77px;
+    border-right: 1px solid #1a010138;
+    width: 50px
+}*/
+
+.ant-col.calendar-day {
+    padding: 0px !important;
+}
+
+.ant-table table {
+    border-collapse: collapse !important;
+}

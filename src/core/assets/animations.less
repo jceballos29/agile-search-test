@@ -1,0 +1,17 @@
+﻿.login-transition-enter {
+    transform: translate(100%);
+}
+
+.login-transition-enter.login-transition-enter-active {
+    transform: translate(0%);
+    transition: transform 1000ms ease-in-out;
+}
+
+.login-transition-leave {
+    transform: translate(0%);
+}
+
+.login-transition-leave.login-transition-leave-active {
+    transform: translate(-100%);
+    transition: transform 1000ms ease-in-out;
+}

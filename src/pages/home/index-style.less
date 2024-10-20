@@ -1,0 +1,142 @@
+﻿@fi-dark-blue: rgb(0, 0, 164);
+@fi-light-blue: #00aeff;
+
+//INDEX DESIGN 
+.index-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 75px;
+    background-image: linear-gradient(#00000086, #000000cc), url('../../assets/business-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .content-header {
+        width: 100%;
+        max-width: 1200px;
+
+        .ant-breadcrumb-link>a,
+        h3 {
+            color: white !important;
+        }
+    }
+
+    .index-filters {
+        width: 100%;
+        max-width: 1200px;
+        padding: 30px 40px;
+        background-color: white;
+
+        >div:last-child {
+            margin-top: 30px;
+            text-align: center;
+
+            button {
+                float: right;
+            }
+
+            img {
+                margin-right: 30px;
+                float: right;
+                height: 30px;
+                cursor: pointer;
+            }
+
+            a>img {
+                float: left;
+                height: 30px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+//HIBRID LIST DESIGN 
+.index-filters>div,
+.grants-filters>div {
+    padding-top: 10px;
+
+    label {
+        font-size: 16px;
+        color: @fi-dark-blue;
+        margin-bottom: 5px;
+    }
+
+    h2 {
+        color: @fi-light-blue;
+
+        span {
+            margin-right: 10px;
+        }
+    }
+}
+
+.title-home {
+    padding: 0 0px 10px 10px;
+    margin-top: -10px;
+
+    h3 {
+        color: #0000a4;
+        font-weight: bold;
+        font-size: 20pt;
+    }
+}
+
+//GRANT LIST DESIGN
+.primary-splitter {
+
+    .content-header {
+        margin: 0;
+    }
+
+    .grants-filters {
+        width: 100%;
+        background-color: #D9F3FF;
+        padding: 20px;
+        border-radius: 5px;
+        display: inline-block;
+
+        > div > div {
+            width: 100%;
+            min-width: 60px;
+        }
+
+        > div:last-child {
+            margin-top: 15px;
+
+            button {
+                float: right;
+                cursor: pointer;
+                height: 30px;
+                margin-right: 10px;
+            }
+
+            img {
+                margin-right: 10px;
+                float: left;
+                height: 30px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+//Card Design
+.row-calendar {
+    margin: 10px 0;
+    align-items: center;
+    gap: 8px;
+
+    >img {
+        height: 30px;
+    }
+
+    >span {
+        font-size: 25px;
+        margin: 0;
+    }
+}
+
+.ant-popover.ant-popover-placement-topLeft {
+    max-width: 300px !important;
+}
