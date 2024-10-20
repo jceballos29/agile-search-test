@@ -1,0 +1,300 @@
+@fi-dark-blue: rgb(0, 0, 164);
+@fi-light-blue: #00aeff;
+
+main.edit-mode {
+  padding: 0 !important;
+  background: #f0f2f5 !important;
+}
+
+.grant-card-style {
+  margin-left: 30px;
+  margin-right: 30px
+}
+
+.grant-card-style .row-left {
+  font-weight: bold
+}
+
+.grant-card-style .text-val {
+  text-align: justify
+}
+
+.table-header {
+  .ant-input-search {
+    .ant-input {
+      min-height: 34px !important;
+      height: 34px !important;
+    }
+  }
+}
+
+//Icon Favorite
+
+.icon-favorite {
+  width: 40px !important;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.ant-card-contain-tabs {
+  .ant-card-head {
+    padding: 0 24px !important;
+
+    .ant-card-head-title {
+      padding: 10px 0 0 0 !important;
+    }
+  }
+
+  .ant-card-body {
+    padding: 15px 20px !important;
+  }
+}
+
+
+.ant-pagination.mini {
+  .ant-pagination-item-link svg {
+    min-height: 23px !important;
+  }
+}
+
+.selected-row td {
+  background: #f0f2f5 !important;
+  transition: background 0.3s;
+}
+
+.clickable-row {
+  cursor: pointer;
+}
+
+.ant-tabs-nav {
+  z-index: 3 !important;
+}
+
+.side-view .ant-drawer-body {
+  display: flex;
+}
+
+.detail-error {
+  display: flex;
+  width: 100%;
+  align-self: center;
+  justify-content: center;
+
+  .ant-alert {
+    width: fit-content;
+    text-align: center;
+  }
+}
+
+.employee-card h5 {
+  font-size: 18px;
+  font-weight: bold;
+  color: @fi-light-blue !important;
+}
+
+.rst__rowTitle {
+  color: @fi-light-blue;
+}
+
+
+.grant-item-container {
+    padding: 15px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    transition: all 0.6s;
+}
+
+.grants-container {
+  margin-top: 10px;
+  padding-bottom: 75px;
+  justify-content: center;
+}
+
+.grants-container-title {
+  color: @fi-dark-blue
+}
+
+
+
+.country-select .ant-avatar {
+  height: 22px !important;
+  width: 22px !important;
+}
+
+.location-select .ant-avatar {
+  height: 18px !important;
+  width: 18px !important;
+}
+
+.grant-select .grant-item-container {
+  min-height: 180px;
+  height: 100%;
+}
+
+.grant-select .grants-filters>div {
+  padding-top: 5px;
+
+  label {
+    font-size: 16px;
+    color: @fi-dark-blue;
+    margin-bottom: 5px;
+  }
+
+  h2 {
+    color: @fi-light-blue;
+
+    span {
+      margin-right: 10px;
+    }
+  }
+}
+
+.grant-item-container:hover {
+    background: aliceblue;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 164, 0.1)!important;
+}
+
+.grant-item-container p {
+  color: rgb(55, 74, 102);
+}
+
+.grant-flag {
+  text-align: center;
+  overflow: hidden;
+}
+
+.grant-flag img {
+  width: 100%;
+  margin: auto;
+  border: 0.5px solid lightgray;
+}
+
+
+.subscribe-container {
+  margin-left: 20px;
+}
+
+.subscribe-container button {
+  background-color: #647288;
+  color: white;
+}
+
+.subscribe-container .subscribe-button {
+  margin-top: 560px;
+  display: flex;
+}
+
+.subscription-item-form {
+  margin-bottom: 20px;
+}
+
+.subscribe-button {
+  background-color: #647288;
+  color: white;
+}
+
+.ant-input-affix-wrapper {
+  padding: 0px 11px !important;
+}
+
+.grants-container .ant-card-extra {
+  display: contents;
+}
+
+.fi-light-blue-button-new {
+  border-color: @fi-dark-blue;
+  color: black !important;
+  //font-weight: bold;
+}
+
+.fi-light-blue-button-new:hover {
+  border-color: @fi-light-blue;
+  color: @fi-light-blue !important;
+}
+
+.fi-light-blue-button {
+  background: @fi-light-blue;
+  color: white !important;
+  font-weight: bold;
+}
+
+.fi-light-blue-button:hover {
+  background: @fi-dark-blue;
+}
+
+.ant-btn-dangerous.ant-btn-primary{
+    margin-right: 10px !important;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+
+.btn-card-design {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-size: small;
+  text-align: center
+}
+
+//Responsive Grant Details
+
+.content-header {
+  white-space: pre-wrap;
+  /* CSS3 */
+  white-space: -moz-pre-wrap;
+  /* Firefox */
+  white-space: -pre-wrap;
+  /* Opera <7 */
+  white-space: -o-pre-wrap;
+  /* Opera 7 */
+  word-wrap: break-word;
+  /* IE */
+}
+
+.ant-layout-footer {
+    z-index: 1;
+}
+
+.header-container-details {
+  padding: 50px 10px 0 10px;
+}
+
+main.ant-layout-content {
+    overflow: unset !important;
+
+    > div {
+        padding: 0 !important;
+    }
+}
+
+section.ant-layout {
+    overflow: hidden;
+}
+
+.primary-splitter {
+    height: calc(100% - 90px);
+    width: calc(100% - 50px);
+
+    .layout-pane:nth-child(1) {
+        background-color: #D9F3FF;
+    }
+}
+

@@ -1,0 +1,66 @@
+/*Stagging*/
+@staging-color: rgb(173,2,116);
+
+.staging {
+    .login-footer {
+        background: @staging-color !important;
+    }
+
+    .card-login .ant-card-body {
+        border: solid 10px @staging-color !important;
+    }
+
+    footer {
+        background: @staging-color !important;
+    }
+
+    .logo-image-container {
+        background: @staging-color !important;
+    }
+
+    .logo-border {
+        background: @staging-color !important;
+    }
+
+    .sider-menu .ant-layout-sider, .sider-menu .ant-layout-sider ul {
+        background: @staging-color !important;
+    }
+
+    .sider-menu .ant-menu.ant-menu-dark, .sider-menu .ant-menu-dark .ant-menu-sub, .sider-menu .ant-menu.ant-menu-dark .ant-menu-sub {
+        background: @staging-color !important;
+    }
+}
+
+.staging.my-apps .ant-drawer-header {
+    background: @staging-color !important;
+}
+
+.staging:after {
+    content: "staging";
+    font-size: 10em;
+    color: rgba(173,2,116,0.1);
+    z-index: 9999;
+    display: flex;
+    font-style: italic;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-pointer-events: none;
+    -moz-pointer-events: none;
+    -ms-pointer-events: none;
+    -o-pointer-events: none;
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.mouseMoving:after {
+    content: "";
+}
