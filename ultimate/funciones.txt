@@ -1,0 +1,12 @@
+.ant-input-search > .ant-input-group > .ant-input-group-addon:last-child .ant-input-search-button {
+  height: 38px !important;
+  width: 38px !important;
+}
+
+
+export function GetCountryImageFlag(code: string, countries: CountrySummary[]): React.ReactNode {
+  var ico = countries.firstOrDefault(t => t.code == code)?.icon;
+  if (ico)
+    return <img src={countries.firstOrDefault(t => t.code == code).icon} />
+  return GetImageFlag(code, worldFlag)
+}

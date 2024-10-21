@@ -1,0 +1,18 @@
+.navigation {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0 8px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.button{
+  border-color: #0000a4 !important;
+  color: #000000 !important;
+
+  &:hover {
+    border-color: #00aeff !important;
+    color: #00aeff !important;
+  }
+}

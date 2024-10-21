@@ -1,0 +1,1 @@
+export { default as Cards-results } from './Cards-results';
