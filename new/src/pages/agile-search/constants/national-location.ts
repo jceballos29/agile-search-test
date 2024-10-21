@@ -1,0 +1,1 @@
+export const nationals = ['National', 'Nationale', 'Nazionale', 'Nacional'];
