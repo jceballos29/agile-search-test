@@ -1,0 +1,1 @@
+export { default as TableResults } from './table-results';
