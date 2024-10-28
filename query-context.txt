@@ -1,0 +1,102 @@
+import { isEqual } from 'lodash';
+import React from 'react';
+import { GrantFilters } from 'src/components/grant-filters';
+import { OrderDefinition } from 'src/core/stores/data-store';
+
+export interface QueryState {
+  filters: GrantFilters;
+  page: number;
+  pageSize: number;
+  orderBy: OrderDefinition[];
+  search: string;
+  origin: string;
+}
+
+interface QueryContextProps {
+  query: QueryState;
+  updateQuery: (updates: Partial<QueryState>) => void;
+  resetFilters: () => void;
+  initialized: boolean;
+  viewType: 'cards' | 'table';
+  handleViewChange: (type: 'cards' | 'table') => void;
+}
+
+export const QueryContext = React.createContext<QueryContextProps | undefined>(undefined);
+
+interface QueryProviderProps {
+  children: React.ReactNode;
+}
+
+const defaultQuery: QueryState = {
+  filters: {},
+  page: 1,
+  pageSize: 20,
+  orderBy: [
+    { field: 'orderByStatusCategory', direction: 'Ascending', useProfile: false },
+    { field: 'publicationDate', direction: 'Descending', useProfile: false },
+  ],
+  origin: 'search',
+  search: '',
+};
+
+const QueryProvider: React.FC<QueryProviderProps> = ({ children }) => {
+
+  const [query, setQuery] = React.useState<QueryState>(defaultQuery);
+  const [initialized, setInitialized] = React.useState(false);
+  const [viewType, setViewType] = React.useState<'cards' | 'table'>('cards');
+
+  const updateQuery = (updates: Partial<QueryState>) => {
+    if (!isEqual(updates.filters, query.filters) || updates.search !== query.search) {
+      updates.page = 1;
+    }
+
+    const newQuery = { ...query, ...updates };
+    setQuery(newQuery);
+    localStorage.setItem('search-query', JSON.stringify(newQuery));
+  };
+
+  const resetFilters = () => {
+    setQuery(defaultQuery);
+    localStorage.setItem('search-query', JSON.stringify(defaultQuery));
+  };
+
+  const handleViewChange = (type: 'cards' | 'table') => {
+    setViewType(type);
+    localStorage.setItem('search-view', type);
+  };
+
+  React.useEffect(() => {
+    const cachedQuery = localStorage.getItem('search-query');
+    const view = localStorage.getItem('search-view');
+    if (view) {
+      setViewType(view as 'cards' | 'table');
+    } else {
+      setViewType('cards');
+      localStorage.setItem('search-view', 'cards');
+    }
+    if (cachedQuery) {
+      setQuery(JSON.parse(cachedQuery));
+    } else {
+      setQuery(defaultQuery);
+      localStorage.setItem('search-query', JSON.stringify(defaultQuery));
+    }
+    setInitialized(true);
+  }, []);
+
+  return (
+    <QueryContext.Provider value={{ query, updateQuery, resetFilters, initialized, viewType, handleViewChange }}>{children}</QueryContext.Provider>
+  );
+};
+
+export const useQuery = () => {
+  const context = React.useContext(QueryContext);
+  if (context === undefined) {
+    throw new Error('useQuery must be used within a QueryProvider');
+  }
+  return context;
+};
+
+
+export default QueryProvider;
+
+
